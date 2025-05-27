@@ -11,3 +11,11 @@ def character_count(text):
         else:
             char_count[char] = 1
     return char_count
+
+def sorter(char_count):
+    list = []
+    for char, count in char_count.items():
+        final = {"char" : char, "num" : count }
+        list.append(final)
+    list.sort(key=lambda x: x["num"], reverse=True)
+    return list
